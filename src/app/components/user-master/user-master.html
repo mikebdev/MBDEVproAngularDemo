@@ -1,0 +1,63 @@
+<div class="container py-4">
+    <div class="card shadow-sm">
+        <div class="card-header bg-primary text-white">
+            <h4 class="mb-0">User</h4>
+        </div>
+        <div class="card-body">
+            <form #formData="ngForm">
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <label for="id" class="form-label">ID</label>
+                        <input type="number" [(ngModel)]="userObj.id" class="form-control" id="id" name="id"
+                            placeholder="0" disabled>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" #name="ngModel" [(ngModel)]="userObj.name" class="form-control" id="name"
+                            name="name" required minlength="5" placeholder="Enter name">
+                        @if(name.touched || name.dirty) {
+                        <div class="text-danger">
+                            <!-- --{{name.errors | json}} -->
+                            @if(name.errors?.['required']) {
+                            <span>Name is required.</span>
+                            }
+                            @else if(name.errors?.['minlength']) {
+                            <span>Name is required and should be at least 5 characters long.</span>
+                            }
+                        </div>
+                        }
+                    </div>
+                    <div class="col-md-4">
+                        <label for="username" class="form-label">Username</label>
+                        <input type="text" [(ngModel)]="userObj.username" class="form-control" id="username"
+                            name="username" placeholder="Enter username">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" [(ngModel)]="userObj.email" class="form-control" id="email" name="email"
+                            placeholder="Enter email">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" [(ngModel)]="userObj.password" class="form-control" id="password"
+                            name="password" placeholder="Enter password">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="city" class="form-label">City</label>
+                        <input type="text" [(ngModel)]="userObj.city" class="form-control" id="city" name="city"
+                            placeholder="Enter city">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="state" class="form-label">State</label>
+                        <input type="text" [(ngModel)]="userObj.state" class="form-control" id="state" name="state"
+                            placeholder="Enter state">
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <button type="submit" [disabled]="formData.invalid" class="btn btn-primary">Save User</button>
+                    <button type="reset" class="btn btn-secondary ms-2">Reset</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

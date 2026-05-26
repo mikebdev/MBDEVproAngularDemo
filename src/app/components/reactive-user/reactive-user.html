@@ -1,0 +1,67 @@
+<div class="container py-4">
+    <div class="card shadow-sm">
+        <div class="card-header bg-success text-white">
+            <h4 class="mb-0">User Registration Form</h4>
+        </div>
+        <div class="card-body">
+            <form [formGroup]="userForm">
+                <div class="row g-3">
+                    <!-- <div class="col-md-4">
+                        <label for="id" class="form-label">ID</label>
+                        <input type="number" class="form-control" id="id" name="id"
+                            placeholder="0" disabled>
+                    </div> -->
+                    <div class="col-md-4">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" formControlName="name" class="form-control">
+                        @if(userForm.controls['name'].touched || userForm.controls['name'].dirty) {
+                        <div class="text-danger">
+                            <!-- --{{name.errors | json}} -->
+                            @if(userForm.controls['name'].errors?.['required']) {
+                            <span>Name is required.</span>
+                            }
+                            @else if(userForm.controls['name'].errors?.['minlength']) {
+                            <span>Name is required and should be at least 5 characters long.</span>
+                            }
+                        </div>
+                        }
+                    </div>
+                    <div class="col-md-4">
+                        <label for="username" class="form-label">Username</label>
+                        <input type="text" formControlName="userName" class="form-control" id="username"
+                            placeholder="Enter username">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" formControlName="email" class="form-control" id="email"
+                            placeholder="Enter email">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" formControlName="password" class="form-control" id="password"
+                            placeholder="Enter password">
+                    </div>
+                    <!-- <div class="col-md-6">
+                        <label for="password" class="form-label">Retype Password</label>
+                        <input type="password" class="form-control" id="retypepassword" name="retypepassword"
+                            placeholder="Retype password">
+                    </div> -->
+                    <!-- <div class="col-md-6">
+                        <label for="city" class="form-label">City</label>
+                        <input type="text" class="form-control" id="city" name="city"
+                            placeholder="Enter city">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="state" class="form-label">State</label>
+                        <input type="text" class="form-control" id="state" name="state"
+                            placeholder="Enter state">
+                    </div> -->
+                </div>
+                <div class="mt-4">
+                    <button type="submit" [disabled]="userForm.invalid" class="btn btn-primary">Submit</button>
+                    <button type="reset" class="btn btn-secondary ms-2">Reset</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

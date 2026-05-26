@@ -1,0 +1,46 @@
+    .container {
+      max-width: 600px;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 120px;
+      font-weight: 900;
+      margin: 0;
+      line-height: 1;
+      text-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    h2 {
+      font-size: 28px;
+      margin: 10px 0 20px;
+      font-weight: 400;
+    }
+
+    p {
+      font-size: 18px;
+      opacity: 0.9;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 32px;
+      background: white;
+      color: #667eea;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 17px;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .emoji {
+      font-size: 80px;
+      margin-bottom: 20px;
+    }
