@@ -1,0 +1,33 @@
+<p>data-binding works!</p>
+
+<p style="font:bold">interpolation</p>
+<span> {{courseName}} </span>
+<br>
+<span>{{cityName}}</span>  
+<br>
+<br>
+<p style="font:bold;">Property Binding</p>
+<br>
+<input type="text" [value]="courseName">
+<p [class]="className"> This is a Blue </p>
+<p></p>
+<p> <input [type]="inputType"> <p>
+<p></p>
+<p style="font:bold;">Event Binding</p>
+<p></p>
+<p> <button (click)="showWelcomeMessage()">Show Message</button> </p>
+<p></p>
+
+<select (change)="onStateChanged()">
+    <option>Baltimore</option>
+    <option>Shrewsbury</option>
+    <option>Hunt Valley</option>
+    <option>York</option>
+</select>
+
+<p>Two Way Data Binding</p>
+<p></p>
+<p> ngModel used here is a directive. <input type="text" [(ngModel)]="courseName"> </p>
+<p></p>
+<p> <button (click)="changeCourseName('Java')">Change Course Name to Java</button> </p>
+<p> <button (click)="changeCourseName('Dot Net')">Change Course Name to Dot Net</button> </p>

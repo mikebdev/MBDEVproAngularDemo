@@ -1,0 +1,44 @@
+<div style="display: flex;">
+
+  <!-- Sidebar -->
+  <div class="sidebar bg-dark text-white p-3" style="width: 200px;  height: 100vh; position: fixed; top: 0; left: 0;">
+    <h4 class="text-center">Menu</h4>
+    <hr>
+    <ul class="nav nav-pills flex-column mb-auto">
+      <li class="nav-item">
+        <a routerLink="variables" class="nav-link text-white">Variables</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="databinding" class="nav-link text-white">Data Binding</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="signal" class="nav-link text-white">Signal</a>
+      </li>
+      <li>
+        <a routerLink="control-flow" class="nav-link text-white">Control Flow</a>
+      </li>
+      <li>
+        <a routerLink="dynamic-css-class" class="nav-link text-white">ngClass ngStyle</a>
+      </li>
+      <li>
+        <a routerLink="users" class="nav-link text-white">Users</a>
+      <li>
+      <li>
+        <a routerLink="reactive-users" class="nav-link text-white">Reactive Users</a>
+      </li>
+      <li>
+        <a routerLink="get-api" class="nav-link text-white">Get API</a>
+      </li>
+      <li>
+        <a routerLink="batch-master" class="nav-link text-white">Batch</a>
+      </li>
+    </ul>
+  </div>
+
+</div>
+
+
+
+<div class="content">
+  <router-outlet></router-outlet>
+</div>
