@@ -9,6 +9,7 @@ import { UserMaster } from './components/user-master/user-master';
 import { ReactiveUser } from './components/reactive-user/reactive-user';
 import { GetAPI } from './components/get-api/get-api';
 import { BatchMaster } from './components/batch-master/batch-master';
+import { ProjectCompetition } from './components/project-competition/project-competition';
 
 export const routes: Routes = [
 {
@@ -51,6 +52,10 @@ export const routes: Routes = [
 {
     path: 'batch-master',
     component: BatchMaster
+},
+{
+    path: 'competition',
+    component: ProjectCompetition
 },
 {
     path: '**',
