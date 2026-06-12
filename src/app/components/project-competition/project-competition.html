@@ -29,7 +29,8 @@
                             <tbody id="tableBody">
                                 @for (item of competitionList(); track $index) {
                                 <tr>
-                                    <td>{{$index+1}}</td>
+                                    <!-- <td>{{$index+1}}</td> -->
+                                     <td>{{item.competitionId}}</td>
                                     <td>{{item.title}}</td>
                                     <td>{{item.startDate}}</td>
                                     <td>{{item.endDate}}</td>
