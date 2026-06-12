@@ -109,7 +109,7 @@ export class ProjectCompetition {
       alert("isConfirmed=(" + id + ")"); // id works here
     this.http.delete("https://api.freeprojectapi.com/api/ProjectCompetition/delete/" + id).subscribe({
       next: (result: any) => {
-        alert("Competition Deleted Successfully");
+        alert("Competition Deleted Successfully")
         this.getAllCompetitions();
       },
       error: (error:any) => {
