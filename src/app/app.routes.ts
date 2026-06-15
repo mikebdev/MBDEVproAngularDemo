@@ -10,6 +10,7 @@ import { ReactiveUser } from './components/reactive-user/reactive-user';
 import { GetAPI } from './components/get-api/get-api';
 import { BatchMaster } from './components/batch-master/batch-master';
 import { ProjectCompetition } from './components/project-competition/project-competition';
+import { SignalForm } from './components/signal-form/signal-form';
 
 export const routes: Routes = [
 {
@@ -56,6 +57,10 @@ export const routes: Routes = [
 {
     path: 'competition',
     component: ProjectCompetition
+},
+{
+    path: 'signal-form',
+    component: SignalForm
 },
 {
     path: '**',

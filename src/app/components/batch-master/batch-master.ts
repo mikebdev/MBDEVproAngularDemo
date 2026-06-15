@@ -8,7 +8,8 @@ import { BatchService } from '../../service/batch-service';
 
 @Component({
   selector: 'app-batch-master',
-  imports: [FormsModule, DatePipe],
+  // imports: [FormsModule, DatePipe],
+  imports: [FormsModule],
   templateUrl: './batch-master.html',
   styleUrl: './batch-master.css',
 })

@@ -4,7 +4,8 @@ import { JsonPipe } from '@angular/common';
 
 @Component({
   selector: 'app-user-master',
-  imports: [FormsModule, JsonPipe],
+  // imports: [FormsModule, JsonPipe],
+  imports: [FormsModule],
   templateUrl: './user-master.html',
   styleUrl: './user-master.css',
 })
