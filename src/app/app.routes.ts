@@ -11,6 +11,7 @@ import { GetAPI } from './components/get-api/get-api';
 import { BatchMaster } from './components/batch-master/batch-master';
 import { ProjectCompetition } from './components/project-competition/project-competition';
 import { SignalForm } from './components/signal-form/signal-form';
+import { LifeCycle } from './components/life-cycle/life-cycle';
 
 export const routes: Routes = [
 {
@@ -61,6 +62,10 @@ export const routes: Routes = [
 {
     path: 'signal-form',
     component: SignalForm
+},
+{
+    path: 'life-cycle',
+    component: LifeCycle
 },
 {
     path: '**',
