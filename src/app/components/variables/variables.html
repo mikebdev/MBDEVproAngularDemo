@@ -1,8 +1,61 @@
-<p>variables works!</p>
-
-
-
+<!-- <p>variables works!</p>
 <input type="text" placeholder="Enter Name">
-
 <br/>
-<button type="button">Save</button>
+<button type="button">Save</button> -->
+
+<div class="row">
+    <div class="col-12">
+        <h2>Upper Case PIPE</h2>
+        courseName => {{courseName}}
+        <br>
+        courseNameUpperCase = {{courseName | uppercase}}
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-12">
+        <h2>Lower Case PIPE</h2>
+        courseName => {{courseName}}
+        <br>
+        courseNameLowerCase = {{courseName | lowercase}}
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-12">
+        <h2>Course Duration PIPE</h2>
+        courseDuration => {{courseDuration}}
+        <br>
+        courseDurationTitleCase = {{courseDuration | titlecase}}
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-12">
+        <h2>Date PIPE</h2>
+        currentDate => {{currentDate}}
+        <br>
+        currentDatePipe = {{currentDate | date}}
+        <br>
+        {{currentDate | date: 'dd-MM-yyyy'}}
+        <br>
+        {{currentDate | date: 'dd/MMM/yyyy'}}
+        <br>
+        {{currentDate | date: 'dd/MMMM/yyyy'}}
+        <br>
+        {{currentDate | date: 'hh:mm:ss'}}
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-12">
+        <h2>Slice PIPE</h2>
+        rollNoArray => {{rollNoArray}}
+        <br>
+        slice => {{rollNoArray | slice:0:3}}
+        <br>
+        {{studentObj}}
+        <br>
+        {{studentObj | json}}
+    </div>
+</div>

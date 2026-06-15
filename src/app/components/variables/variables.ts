@@ -1,9 +1,10 @@
+import { DatePipe, JsonPipe, LowerCasePipe, SlicePipe, TitleCasePipe, UpperCasePipe } from '@angular/common';
 import { Component } from '@angular/core';
 
 // component decorator
 @Component({
   selector: 'app-variables',
-  imports: [],
+  imports: [UpperCasePipe, LowerCasePipe, TitleCasePipe, DatePipe, SlicePipe, JsonPipe],
   templateUrl: './variables.html',
   styleUrl: './variables.css',
 })
@@ -11,6 +12,7 @@ import { Component } from '@angular/core';
 export class Variables {
 
 courseName : string = "MBDEVpro Course";
+courseDuration: string = "This course lasts 3 months.";
 currentVersion : string = "v.21";
 rollNO : number = 121;
 productPrice : number = 1200.60;

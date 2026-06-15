@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, OnInit, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { DatePipe } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
@@ -13,15 +13,13 @@ import { BatchService } from '../../service/batch-service';
   templateUrl: './batch-master.html',
   styleUrl: './batch-master.css',
 })
-export class BatchMaster {
+export class BatchMaster implements OnInit{
 
   // Endpoint: https://freeprojectapi.com/api.html
   newBatchObj: Batch = new Batch();
   http = inject(HttpClient);
   //batchList: Batch[] = [];
   batchList = signal<Batch[]>([]); // Using signal for reactive state management
-
-
 
   // service setup: test
 
@@ -35,18 +33,18 @@ export class BatchMaster {
   //   const result = masterService.addNumbers(12,12);
   // }
 
-
-
   constructor() {
     // Normally would not do this in the constructor, but for demo purposes, we can fetch the batch list here
     // this.fetchBatchList();
     const serviceMasterName = this.masterService.serviceName; // just testing.
     const serviceBatchName = this.batchService.serviceName; // just testing.
     const result = this.masterService.addNumbers(50, 25);
-    this.getAllBatches();
+    // this.getAllBatches();
   }
 
-
+ngOnInit(): void {
+    this.getAllBatches();
+}
 
 
 
