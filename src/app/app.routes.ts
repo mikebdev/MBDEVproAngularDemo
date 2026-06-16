@@ -12,63 +12,75 @@ import { BatchMaster } from './components/batch-master/batch-master';
 import { ProjectCompetition } from './components/project-competition/project-competition';
 import { SignalForm } from './components/signal-form/signal-form';
 import { LifeCycle } from './components/life-cycle/life-cycle';
+import { Login } from './components/login/login';
+import { Layout } from './components/layout/layout';
 
 export const routes: Routes = [
-{
-    path: '',
-    redirectTo:'databinding',
-    pathMatch: 'full'
-},
-{
-    path: 'databinding',
-    component: DataBinding
-},
-{
-    path: 'signal',
-    component: Signal
-},
-{
-    path: 'variables',
-    component: Variables
-},
-{
-    path: 'control-flow',
-    component: ControlFlow
-},
-{
-    path: 'dynamic-css-class',
-    component: DynamicCssClass
-},
-{
-    path: 'users',
-    component: UserMaster
-},
-{
-    path: 'reactive-users',
-    component: ReactiveUser
-},
-{
-    path: 'get-api',
-    component: GetAPI
-},
-{
-    path: 'batch-master',
-    component: BatchMaster
-},
-{
-    path: 'competition',
-    component: ProjectCompetition
-},
-{
-    path: 'signal-form',
-    component: SignalForm
-},
-{
-    path: 'life-cycle',
-    component: LifeCycle
-},
-{
-    path: '**',
-    component: NotFound
-}
+    {
+        path: '',
+        redirectTo: 'login',
+        pathMatch: 'full'
+    },
+    {
+        path: 'login',
+        component: Login
+    },
+    {
+        path: '',
+        component: Layout,
+        children: [
+            {
+                path: 'databinding',
+                component: DataBinding
+            },
+            {
+                path: 'signal',
+                component: Signal
+            },
+            {
+                path: 'variables',
+                component: Variables
+            },
+            {
+                path: 'control-flow',
+                component: ControlFlow
+            },
+            {
+                path: 'dynamic-css-class',
+                component: DynamicCssClass
+            },
+            {
+                path: 'users',
+                component: UserMaster
+            },
+            {
+                path: 'reactive-users',
+                component: ReactiveUser
+            },
+            {
+                path: 'get-api',
+                component: GetAPI
+            },
+            {
+                path: 'batch-master',
+                component: BatchMaster
+            },
+            {
+                path: 'competition',
+                component: ProjectCompetition
+            },
+            {
+                path: 'signal-form',
+                component: SignalForm
+            },
+            {
+                path: 'life-cycle',
+                component: LifeCycle
+            }
+        ]
+    },
+    {
+        path: '**',
+        component: NotFound
+    }
 ];
