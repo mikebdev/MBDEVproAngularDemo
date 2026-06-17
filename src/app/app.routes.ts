@@ -14,6 +14,7 @@ import { SignalForm } from './components/signal-form/signal-form';
 import { LifeCycle } from './components/life-cycle/life-cycle';
 import { Login } from './components/login/login';
 import { Layout } from './components/layout/layout';
+import { authGuard } from './guards/auth-guard';
 
 export const routes: Routes = [
     {
@@ -28,6 +29,7 @@ export const routes: Routes = [
     {
         path: '',
         component: Layout,
+        canActivate:[authGuard],
         children: [
             {
                 path: 'databinding',
@@ -35,7 +37,7 @@ export const routes: Routes = [
             },
             {
                 path: 'signal',
-                component: Signal
+                component: Signal,
             },
             {
                 path: 'variables',

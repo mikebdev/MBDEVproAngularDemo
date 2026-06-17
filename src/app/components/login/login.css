@@ -1,6 +1,12 @@
 
    /* *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; } */
 
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
     :root {
       --bg-deep:    #080D1A;
       --bg-mid:     #0D1526;
